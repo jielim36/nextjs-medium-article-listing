@@ -109,7 +109,7 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          max-width: 800px;
+          max-width: 600px;
           margin: 0 auto;
           padding: 20px;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -155,7 +155,7 @@ export default function Home() {
         .posts-container {
           display: flex;
           flex-direction: column;
-          gap: 30px;
+          gap: 14px;
         }
 
         /* Update the .post-card style */
@@ -163,7 +163,7 @@ export default function Home() {
           background: white;
           border: 1px solid #e1e5e9;
           border-radius: 8px;
-          padding: 25px; /* Adjust padding as needed */
+          padding: 16px; /* Adjust padding as needed */
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           transition: transform 0.2s, box-shadow 0.2s;
           display: flex; /* Add flexbox to align items horizontally */
