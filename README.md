@@ -1,82 +1,64 @@
 # Medium RSS Reader
 
-一个极其轻量的Next.js项目，通过RSS获取Medium用户的最新文章。
+A lightweight Next.js project that fetches the latest articles from a Medium user's RSS feed.
 
-## 功能特性
+## Features
 
-- 🚀 极其轻量，只依赖必要的包
-- 📱 响应式设计，支持移动端
-- 🔄 实时刷新功能
-- 🌐 Vercel一键部署
-- ⚙️ 环境变量配置
+  - 🚀 **Extremely Lightweight:** Depends only on essential packages.
+  - 📱 **Responsive Design:** Optimized for both desktop and mobile devices.
+  - 🔄 **Real-time Refresh:** Includes a real-time refresh function.
+  - 🌐 **One-Click Vercel Deployment:** Easily deploy with Vercel.
+  - ⚙️ **Environment Variable Configuration:** Flexible setup using environment variables.
 
-## 环境变量配置
+-----
 
-在Vercel部署时，或在本地`.env.local`文件中设置以下环境变量：
+## Environment Variables
+
+Configure the following environment variables in your Vercel project settings or in a local `.env.local` file.
 
 ```bash
-MEDIUM_USERNAME=jielim36    # Medium用户名（不带@符号）
-FEED_COUNT=5               # 获取文章数量
+MEDIUM_USERNAME=jielim36     # Your Medium username (without the @ symbol)
+FEED_COUNT=5                 # The number of articles to fetch
 ```
 
-## 本地开发
+-----
 
-1. 安装依赖：
-```bash
-npm install
-```
+## Local Development
 
-2. 创建`.env.local`文件并配置环境变量：
-```bash
-MEDIUM_USERNAME=jielim36
-FEED_COUNT=5
-```
+1.  **Install dependencies:**
 
-3. 启动开发服务器：
-```bash
-npm run dev
-```
+    ```bash
+    npm install
+    ```
 
-4. 打开浏览器访问 `http://localhost:3000`
+2.  **Create a `.env.local` file** and add your environment variables:
 
-## Vercel部署
+    ```bash
+    MEDIUM_USERNAME=jielim36
+    FEED_COUNT=5
+    ```
 
-1. 将代码推送到GitHub仓库
-2. 在Vercel中导入项目
-3. 在Environment Variables中设置：
-   - `MEDIUM_USERNAME`: Medium用户名（如：jielim36）
-   - `FEED_COUNT`: 文章数量（如：5）
-4. 点击Deploy
+3.  **Start the development server:**
 
-## 项目结构
+    ```bash
+    npm run dev
+    ```
 
-```
-.
-├── app/
-│   ├── api/rss/route.ts    # RSS API路由
-│   ├── layout.tsx          # 根布局
-│   └── page.tsx           # 主页面
-├── package.json
-├── next.config.js
-├── tsconfig.json
-└── README.md
-```
+4.  Open your browser and visit `http://localhost:3000`.
 
-## 技术栈
+-----
 
-- **Next.js 14** - React框架
-- **TypeScript** - 类型安全
-- **RSS Parser** - RSS解析
-- **Styled JSX** - CSS-in-JS
+## Vercel Deployment
 
-## RSS源
+1.  Push your code to a GitHub repository.
+2.  Import the project into Vercel.
+3.  In the project settings, navigate to **Environment Variables** and set:
+      - `MEDIUM_USERNAME`: Your Medium username (e.g., `jielim36`).
+      - `FEED_COUNT`: The number of articles (e.g., `5`).
+4.  Click **Deploy**.
 
-项目使用Medium的RSS feed格式：
-`https://medium.com/feed/@{username}`
+-----
 
-## 特性说明
+## RSS Feed
 
-- **垂直列表布局** - 文章以卡片形式垂直排列
-- **环境变量控制** - 通过Vercel环境变量灵活配置用户名和文章数量
-- **错误处理** - 完善的错误处理和加载状态
-- **响应式设计** - 自适应桌面和移动设备
+The project uses Medium's official RSS feed format: `https://medium.com/feed/@{username}`.
