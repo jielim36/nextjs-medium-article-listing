@@ -23,6 +23,8 @@ export default function Home() {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
 
+  
+
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -107,6 +109,11 @@ export default function Home() {
         ))}
       </div>
 
+      <style jsx global>{` /* Using 'global' here to target the body tag */
+        body {
+          background-color: transparent;
+        }
+      `}</style>
       <style jsx>{`
         .container {
           max-width: 600px;
@@ -160,7 +167,7 @@ export default function Home() {
 
         /* Update the .post-card style */
         .post-card {
-          background: white;
+          background: white; /* This keeps the card background white */
           border: 1px solid #e1e5e9;
           border-radius: 8px;
           padding: 16px; /* Adjust padding as needed */
