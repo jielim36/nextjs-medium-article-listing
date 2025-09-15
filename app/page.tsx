@@ -258,30 +258,21 @@ export default function Home() {
         }
 
         @media (max-width: 768px) {
-          .container {
-            padding: 15px;
-          }
-          
-          .header h1 {
-            font-size: 2rem;
-          }
-          
-          .post-content {
+          .post-card {
+            /* Change the direction of the flex container */
             flex-direction: column;
           }
-          
+
+          /* Add this rule to allow the text container to take up full width */
+          .post-details {
+            width: 100%;
+          }
+
+          /* Ensure the thumbnail takes full width as well */
           .post-thumbnail {
             width: 100%;
             height: 200px;
-          }
-          
-          .post-details {
-            padding: 20px;
-          }
-          
-          .post-meta {
-            flex-direction: column;
-            gap: 5px;
+            margin-bottom: 15px; /* Add some space below the image */
           }
         }
       `}</style>
