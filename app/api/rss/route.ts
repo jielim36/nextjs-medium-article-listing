@@ -5,7 +5,7 @@ const parser = new Parser();
 
 export async function GET() {
   try {
-    const username = process.env.MEDIUM_USERNAME || 'jielim36';
+    const username = process.env.MEDIUM_USERNAME;
     const feedCount = parseInt(process.env.FEED_COUNT || '5');
     
     const rssUrl = `https://medium.com/feed/@${username}`;
